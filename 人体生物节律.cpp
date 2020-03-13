@@ -52,3 +52,16 @@ int total_year_day(int year1,int year2)
     }
     return sum_year_day;
 }
+int main()
+{
+    int year1 = 2013, month1 = 1,day1 = 1;
+    int year2 = 2013, month2 = 1,day2 = 1;
+    int sum = 0;
+    printf("请输入起始的年月日（格式为：XXXX：XX：XX）");
+    scanf("%d:%d:%d",&year1,&month1,&day1);
+    printf("请输入结束的年月日（格式为：XXXX：XX：XX）");
+    scanf("%d:%d:%d",&year2,&month2,&day2);
+    sum = total_year_day(year1,year2) - total_day(year1,month1,day1) + total_day(year2,month2,day2);
+    printf("它们之间相差的天数为：%d\n",sum);
+    return 0;
+}
