@@ -1,3 +1,5 @@
+#include<stdio.h>
+#include<iostream>
 int total_day(int year,int month,int day)
 {
     int sum = 0;
@@ -57,11 +59,22 @@ int main()
     int year1 = 2013, month1 = 1,day1 = 1;
     int year2 = 2013, month2 = 1,day2 = 1;
     int sum = 0;
-    printf("请输入起始的年月日（格式为：XXXX：XX：XX）");
-    scanf("%d:%d:%d",&year1,&month1,&day1);
-    printf("请输入结束的年月日（格式为：XXXX：XX：XX）");
-    scanf("%d:%d:%d",&year2,&month2,&day2);
+    printf("计算人体生物节律\n");
+    printf("请输入出生年份后按enter\n");
+    scanf("%d",&year1);
+	printf("请输入出生月份后按enter\n");
+	scanf("%d",&month1);
+	printf("请输入出生日子后按enter\n");
+	scanf("%d",&day1);
+	printf("请输入查询年份后按enter\n");
+	scanf("%d",&year2);
+	printf("请输入查询月份后按enter\n");
+	scanf("%d",&month2);
+	printf("请输入查询日期后按enter\n");
+	scanf("%d",&day2);
     sum = total_year_day(year1,year2) - total_day(year1,month1,day1) + total_day(year2,month2,day2);
-    printf("它们之间相差的天数为：%d\n",sum);
+	int a=(sum-1)%23,b=(sum-1)%28,c=(sum-1)%33;
+    printf("体力周期为第%d天,\n情绪周期为第%d天,\n智力周期为第%d天\n",a,b,c);
+	system("pause");
     return 0;
 }
