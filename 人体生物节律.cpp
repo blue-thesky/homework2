@@ -39,3 +39,16 @@ int total_day(int year,int month,int day)
     }
     return sum;
 }
+int total_year_day(int year1,int year2)
+{
+    int sum_year_day = 0;
+    int i = 0;
+    sum_year_day = (year2 - year1) * 365;
+    for(i=year1 ; i<year2 ; i++)
+    {
+        if(((i % 4 == 0)&&(i % 100 !=0))||(i % 400) == 0){
+         sum_year_day = sum_year_day + 1;
+        }
+    }
+    return sum_year_day;
+}
