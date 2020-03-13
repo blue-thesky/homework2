@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<iostream>
-int total_day(int year,int month,int day)\\作业需求，如有侵权，敬请谅解
+int total_day(int year,int month,int day)//作业需求，如有侵权，敬请谅解
 {
     int sum = 0;
     switch(month)
